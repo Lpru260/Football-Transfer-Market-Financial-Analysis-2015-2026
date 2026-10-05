@@ -1,0 +1,14 @@
+SELECT p.position,
+COUNT(*) AS Total_Transfers,
+AVG(TRY_CAST(t.transfer_fee AS DECIMAL(18,2))) Avg_Transfer_Fee
+FROM dbo.players p
+
+INNER JOIN dbo.transfers t
+ON p.player_id = t.player_id
+WHERE t.transfer_date >= '2015-01-01'
+  AND TRY_CAST(t.transfer_fee AS decimal(18,2)) > 0
+  AND p.position IS NOT NULL
+  AND p.position<> 'Missing'
+
+GROUP BY p.position
+ORDER BY Avg_Transfer_Fee 
