@@ -6,5 +6,7 @@ SELECT
 FROM dbo.transfers
 WHERE TRY_CAST(transfer_fee AS decimal(18,2)) IS NOT NULL 
   AND TRY_CAST(market_value_in_eur AS decimal(18,2)) IS NOT NULL
+  AND TRY_CAST(transfer_fee AS decimal(18,2)) > 0
 GROUP BY to_club_name
+HAVING COUNT(*) > 15
 ORDER BY Total_Overspending DESC
