@@ -11,5 +11,6 @@ INNER JOIN dbo.competitions compe
 ON compe.competition_id = c.domestic_competition_id
 
 WHERE TRY_CAST(t.transfer_fee AS decimal(18,2)) > 0
+AND (transfer_date BETWEEN '2021-01-01' AND GETDATE())
 GROUP BY compe.name
 ORDER BY Total_Spent DESC

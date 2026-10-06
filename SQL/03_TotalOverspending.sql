@@ -7,6 +7,7 @@ FROM dbo.transfers
 WHERE TRY_CAST(transfer_fee AS decimal(18,2)) IS NOT NULL 
   AND TRY_CAST(market_value_in_eur AS decimal(18,2)) IS NOT NULL
   AND TRY_CAST(transfer_fee AS decimal(18,2)) > 0
+  AND (transfer_date BETWEEN '2021-01-01' AND GETDATE())
 GROUP BY to_club_name
 HAVING COUNT(*) > 15
 ORDER BY Total_Overspending DESC
