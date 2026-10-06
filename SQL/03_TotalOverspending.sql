@@ -1,3 +1,14 @@
+/*
+===============================================================================
+Script:       03_TotalOverspending.sql
+Project:      Football Transfer Market Financial Analysis (2015-2025)
+Author:       Łukasz Prus / Lpru260
+Description:  Evaluates club negotiation efficiency by comparing actual transfer 
+              fees paid against market valuations at signing. Identifies aggressive 
+              premiums ("overspenders") versus bargain acquisitions ("smart buyers").
+===============================================================================
+*/
+
 SELECT 
     to_club_name AS Buying_Club,
     COUNT(*) AS Transfers_Count,

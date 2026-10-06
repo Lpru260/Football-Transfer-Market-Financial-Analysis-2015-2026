@@ -1,3 +1,14 @@
+/*
+===============================================================================
+Script:       04_TotalSpentByLeague.sql
+Project:      Football Transfer Market Financial Analysis (2015-2025)
+Author:       Łukasz Prus / Lpru260
+Description:  Aggregates total transfer investments and transaction volume by league.
+              Exposes capital concentration across top tiers, notably the financial 
+              dominance of the English Premier League over continental peers.
+===============================================================================
+*/
+
 SELECT compe.name,
 COUNT(t.to_club_id) AS Total_Transfers,
 SUM(TRY_CAST(t.transfer_fee AS decimal(18,2))) AS Total_Spent,

@@ -1,3 +1,14 @@
+/*
+===============================================================================
+Script:       06_TransferFeeByPosition.sql
+Project:      Football Transfer Market Financial Analysis (2015-2025)
+Author:       Łukasz Prus / Lpru260
+Description:  Measures pricing disparities across playing positions (Attack, 
+              Midfield, Defence, Goalkeeper). Shows how much more clubs pay 
+              for attackers compared to defenders and goalkeepers.
+===============================================================================
+*/
+
 SELECT p.position,
 COUNT(*) AS Total_Transfers,
 AVG(TRY_CAST(t.transfer_fee AS DECIMAL(18,2))) Avg_Transfer_Fee
