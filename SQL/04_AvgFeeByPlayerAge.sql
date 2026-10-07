@@ -1,7 +1,7 @@
 /*
 ===============================================================================
 Script:       05_AvgFeeByPlayerAge.sql
-Project:      Football Transfer Market Financial Analysis (2015-2025)
+Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Analyzes the relationship between player age at acquisition and fee paid.
               Constructs the market "prime valuation curve" to detect where resale 
@@ -20,7 +20,7 @@ ON p.player_id = t.player_id
 
 WHERE TRY_CAST(t.transfer_fee AS decimal(18,2)) > 0
   AND p.date_of_birth IS NOT NULL
-  AND (transfer_date BETWEEN '2021-01-01' AND GETDATE())
+  AND (transfer_date BETWEEN '2015-01-01' AND GETDATE())
   AND (DATEDIFF(YEAR, p.date_of_birth, t.transfer_date) >15)
   GROUP BY DATEDIFF(YEAR, p.date_of_birth, t.transfer_date)
 

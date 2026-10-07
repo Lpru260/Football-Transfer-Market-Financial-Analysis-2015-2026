@@ -1,7 +1,7 @@
 /*
 ===============================================================================
 Script:       06_TransferFeeByPosition.sql
-Project:      Football Transfer Market Financial Analysis (2015-2025)
+Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Measures pricing disparities across playing positions (Attack, 
               Midfield, Defence, Goalkeeper). Shows how much more clubs pay 
@@ -16,7 +16,7 @@ FROM dbo.players p
 
 INNER JOIN dbo.transfers t
 ON p.player_id = t.player_id
-WHERE (transfer_date BETWEEN '2021-01-01' AND GETDATE())
+WHERE (transfer_date BETWEEN '2015-01-01' AND GETDATE())
   AND TRY_CAST(t.transfer_fee AS decimal(18,2)) > 0
   AND p.position IS NOT NULL
   AND p.position<> 'Missing'

@@ -1,7 +1,7 @@
 /*
 ===============================================================================
 Script:       01_club_financial_balance.sql
-Project:      Football Transfer Market Financial Analysis (2015-2025)
+Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Consolidates buying expenditures and selling revenues into a single
               cash flow model using UNION ALL. Computes net transfer balance per club.
