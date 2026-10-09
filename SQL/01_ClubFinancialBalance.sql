@@ -9,35 +9,39 @@ Description:  Consolidates buying expenditures and selling revenues into a singl
               thresholds (minimum turnover >= €50M).
 ===============================================================================
 */
-
 SELECT 
-    club_name,
-    SUM(Total_Spent) AS Total_Spent,
-    SUM(Total_Income) AS Total_Income,
-    SUM(Total_Income) - SUM(Total_Spent) AS Balance
+    c.name AS club_name,
+    SUM(t.Total_Spent) AS Total_Spent,
+    SUM(t.Total_Income) AS Total_Income,
+    SUM(t.Total_Income) - SUM(t.Total_Spent) AS Balance
 FROM (
+
     SELECT 
-        to_club_name AS club_name,
+        to_club_id AS club_id,
         TRY_CAST(transfer_fee AS DECIMAL(18,2)) AS Total_Spent,
         0 AS Total_Income
     FROM dbo.transfers
     WHERE transfer_date >= '2015-01-01'
       AND TRY_CAST(transfer_fee AS DECIMAL(18,2)) > 0
-      AND to_club_name IS NOT NULL
+      AND to_club_id IS NOT NULL
 
     UNION ALL
 
+
     SELECT 
-        from_club_name AS club_name,
+        from_club_id AS club_id,
         0 AS Total_Spent,
         TRY_CAST(transfer_fee AS DECIMAL(18,2)) AS Total_Income
     FROM dbo.transfers
     WHERE transfer_date >= '2015-01-01'
       AND TRY_CAST(transfer_fee AS DECIMAL(18,2)) > 0
-      AND from_club_name IS NOT NULL
+      AND from_club_id IS NOT NULL
 ) t
-GROUP BY club_name
-HAVING SUM(Total_Spent) > 0 
-   AND SUM(Total_Income) > 0
-   AND (SUM(Total_Spent) + SUM(Total_Income)) >= 50000000
+INNER JOIN Transfermarkt.dbo.clubs c 
+ON t.club_id = c.club_id
+
+GROUP BY c.name
+HAVING SUM(t.Total_Spent) > 0 
+   AND SUM(t.Total_Income) > 0 
+   AND (SUM(t.Total_Spent) + SUM(t.Total_Income)) >= 50000000
 ORDER BY Balance DESC;

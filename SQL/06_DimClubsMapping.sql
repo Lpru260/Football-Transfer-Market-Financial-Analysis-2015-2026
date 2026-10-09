@@ -9,14 +9,11 @@ Description: Generates a club dimension / lookup reference dataset mapping
              relational integrity between financial metrics and league contexts.
 ===============================================================================
 */
-
 SELECT
     cl.name AS club_name,
     cl.domestic_competition_id,
-    com.competition_code AS league_code
-
+    com.competition_code AS league_name
 FROM Transfermarkt.dbo.clubs cl
-
 INNER JOIN Transfermarkt.dbo.competitions com
     ON cl.domestic_competition_id = com.competition_id
-ORDER BY cl.name
+ORDER BY cl.name;
