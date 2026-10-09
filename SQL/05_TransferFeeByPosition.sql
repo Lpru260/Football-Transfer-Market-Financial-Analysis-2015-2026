@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-Script:       06_TransferFeeByPosition.sql
+Script:       05_TransferFeeByPosition.sql
 Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Measures pricing disparities across playing positions (Attack, 

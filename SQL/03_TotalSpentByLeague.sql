@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-Script:       04_TotalSpentByLeague.sql
+Script:       03_TotalSpentByLeague.sql
 Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Aggregates total transfer investments and transaction volume by league.
