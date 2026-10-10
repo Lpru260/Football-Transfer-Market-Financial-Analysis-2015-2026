@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-Script:      06_DimClubsMapping.sql
+Script:      05_DimClubsMapping.sql
 Project:     Football Transfer Market Financial Analysis (2015–2026)
 Author:      Łukasz Prus / Lpru260
 Description: Generates a club dimension / lookup reference dataset mapping 

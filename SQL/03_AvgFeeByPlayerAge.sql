@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-Script:       04_AvgFeeByPlayerAge.sql
+Script:       03_AvgFeeByPlayerAge.sql
 Project:      Football Transfer Market Financial Analysis (2015-2026)
 Author:       Łukasz Prus / Lpru260
 Description:  Analyzes the relationship between player age at acquisition and fee paid.
