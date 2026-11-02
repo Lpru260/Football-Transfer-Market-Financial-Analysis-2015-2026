@@ -1,4 +1,5 @@
 ⚽ Football Transfer Market Financial Analysis (2015–2026)
+
 📖 Project Overview
 This project explores financial and market dynamics in professional football transfers between 2015 and 2026 using Transfermarkt data.
 
