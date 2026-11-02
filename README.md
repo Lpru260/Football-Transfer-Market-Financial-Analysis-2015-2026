@@ -207,3 +207,5 @@ Football-Transfer-Market-Financial-Analysis-2015-2026
 **Łukasz Prus**
 
 GitHub: **Lpru260**
+
+LinkedIn: https://www.linkedin.com/in/lukaszprus/
