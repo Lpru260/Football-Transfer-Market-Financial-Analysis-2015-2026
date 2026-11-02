@@ -1,226 +1,157 @@
-⚽ Football Transfer Market Financial Analysis (2015–2026)
+# ⚽ Football Transfer Market Financial Analysis (2015–2026)
 
-📖 Project Overview
-This project explores financial and market dynamics in professional football transfers between 2015 and 2026 using Transfermarkt data.
+## Overview
 
-The analysis focuses on answering key business questions related to club transfer strategies, spending efficiency, player valuation, and market evolution over time.
+This project analyzes global football transfer activity between 2015 and 2026 using Transfermarkt data.
 
-The project was developed using:
+The objective was to explore transfer market dynamics, evaluate club financial performance, identify overspending behavior, and uncover player valuation patterns based on age and position.
 
-SQL Server (T-SQL)
-Power Query
-Microsoft Excel
-Interactive Dashboard Design
+**Tools Used:**
+- SQL Server (T-SQL)
+- Power Query
+- Microsoft Excel
+- Data Visualization & Dashboarding
 
-🎯 Business Questions
+---
 
-Club Financial Performance
-Which clubs generate the highest transfer profits?
-Which clubs operate as sustainable player-trading organizations?
-Which clubs consistently spend more than they earn?
+# 📊 Dashboard Preview
 
-Transfer Efficiency
-Which clubs pay the highest premiums compared to market value?
-Which clubs appear to negotiate transfers most efficiently?
+## Market Dashboard
 
-Player Valuation
-At what age are players most valuable in the transfer market?
-How does transfer pricing differ across playing positions?
+<img width="924" height="422" alt="image" src="https://github.com/user-attachments/assets/4233760b-2550-40cc-951b-c3d88c5a387a" />
 
-Market Trends
-How has the transfer market evolved since 2015?
-How have transfer spending and overspending changed over time?
 
-🗂️ Dataset
-Source: https://www.kaggle.com/datasets/davidcariboo/player-scores
+### Highlights
+- €77.2B Total Transfer Spending
+- €4.89M Average Transfer Fee
+- €6.5B Total Market Overspending
 
-Period Covered: 2015–2026
+---
 
-The dataset contains information about:
+## Club Dashboard
 
-Transfer fees
-Market values
-Player demographics
-Club information
-Competition data
-Transfer dates and seasons
+<img width="924" height="419" alt="image" src="https://github.com/user-attachments/assets/258eceb3-0150-4c7e-b00b-6d0eaa51a339" />
 
-🛠️ SQL Analysis
-1. Club Financial Balance
-Objective
-Evaluate transfer profitability of football clubs.
 
-Metrics
-Total Spent
-Total Income
-Balance
-Income-To-Spend Ratio (ITSR)
 
-Methodology
-Using UNION ALL, 
-transfer purchases and sales were consolidated into a single cash-flow model.
+### Highlights
+- Benfica generated the highest transfer surplus.
+- Chelsea recorded the highest transfer overspending.
+- Premier League clubs dominate overspending rankings.
+- Traditional player-trading clubs significantly outperform spending-focused clubs in transfer profitability.
 
-Example Insight
-Traditional player-development clubs such as Benfica, Ajax, Salzburg, and Sporting CP generated the highest positive transfer balances.
+---
 
-2. Total Overspending
-Objective
-Measure how much clubs pay above player market value.
+# 🔍 Business Questions
 
-Formula
-Transfer Fee - Market Value
-Metrics
-Transfers Count
-Total Overspending
-Average Overspending Per Player
-Share of Total Overspending
-Example Insight
-Chelsea, Manchester City, and Manchester United recorded the highest cumulative overspending figures.
+### Club Financial Analysis
+- Which clubs generate the highest transfer profits?
+- Which clubs consistently spend more than they earn?
 
-3. Average Transfer Fee by Player Age
-Objective
-Identify the age range that maximizes transfer market value.
+### Transfer Efficiency
+- Which clubs pay the highest premiums above market value?
+- Which clubs appear to negotiate transfers most efficiently?
 
-Metrics
-Age At Transfer
-Average Transfer Fee
+### Player Valuation
+- What is the most valuable player age range?
+- Which playing positions command the highest transfer fees?
 
-Age Segments
-Group	Age Range
-U-21	15–21
-PRIME	22–29
-VETERAN	30+
-Example Insight
-Players aged approximately 22–26 commanded the highest average transfer fees, highlighting the market's preference for athletes in their prime years.
+### Market Trends
+- How has the transfer market evolved since 2015?
+- How did extraordinary events impact market behavior?
 
-4. Transfer Fee by Position
-Objective
-Compare market valuation across playing positions.
+---
 
-Positions Analyzed
-Forward
-Midfielder
-Defender
-Goalkeeper
-Example Insight
-Forwards consistently achieved the highest average transfer fees, while goalkeepers recorded the lowest.
+# 📈 Key Findings
 
-5. Club Mapping Dimension
-Objective
-Create a lookup dataset linking clubs with domestic leagues.
+### 💰 Top Transfer Trading Clubs
 
-Usage
-Used for:
+| Club | Transfer Balance |
+|--------|---------:|
+| SL Benfica | €692.9M |
+| Ajax Amsterdam | €526.9M |
+| RB Salzburg | €439.6M |
+| LOSC Lille | €394.0M |
+| Sporting CP | €369.3M |
 
-XLOOKUP relationships
-Dashboard filters
-League-level analysis
-Power Query transformations
+These clubs demonstrate highly effective player development and resale models.
 
-6. Yearly Market Trends
-Objective
-Analyze macroeconomic trends in the football transfer market.
+---
 
-Metrics
-Total Transfers
-Total Spending
-Average Transfer Fee
-Total Overspending
-Average Overspending Per Player
-Example Insight
-The transfer market experienced significant growth from 2015 onwards, followed by a temporary slowdown and subsequent recovery in later seasons.
+### 💸 Highest Overspending Clubs
 
-📊 Dashboard Highlights
-Market Dashboard
-The market dashboard provides a high-level overview of transfer market activity.
+| Club | Total Overspending |
+|--------|---------:|
+| Chelsea FC | €800.6M |
+| Manchester City | €447.9M |
+| Newcastle United | €414.0M |
+| Manchester United | €391.8M |
+| Brighton | €277.6M |
 
-KPIs
-Total Market Spending
-Average Transfer Fee
-Total Market Overspending
-Visualizations
-Spending vs Overspending by Season
-Spending by Player Age
-Spending by Position
-Club Dashboard
-The club dashboard focuses on transfer performance and financial outcomes.
+These clubs paid the largest cumulative premiums relative to player market values.
 
-Features
-League-Level Slicers
-Top Overspending Clubs
-Highest Transfer Balance Clubs
-Lowest Transfer Balance Clubs
-Key Insight
-The analysis reveals two clearly different business models:
+---
 
-Player-Trading Clubs
+### 👤 Peak Player Value
 
-SL Benfica
-Ajax Amsterdam
-RB Salzburg
-Sporting CP
-FC Porto
+Players aged **22–26** generated the highest average transfer fees, confirming the market preference for players entering or currently in their prime years.
 
-Aggressive Spending Clubs
+---
 
-Chelsea FC
-Manchester City
-Manchester United
-Paris Saint-Germain
-🔑 Key Findings
-💰 Best Financially Performing Clubs
-Several clubs consistently generate positive transfer balances through talent development and player sales.
+### ⚽ Position Premium
 
-📈 Peak Player Value
-Players aged 22–26 represent the highest-valued segment of the transfer market.
+Average transfer fees by position:
 
-⚽ Position Premium
-Forwards command the highest transfer fees across the market.
+| Position | Avg. Fee |
+|----------|----------:|
+| Forward | €5.61M |
+| Midfielder | €5.08M |
+| Defender | €4.17M |
+| Goalkeeper | €3.09M |
 
-💸 Market Inefficiencies
-Certain clubs repeatedly pay substantial premiums over estimated market value.
+Forwards command the highest prices across the transfer market.
 
-🌍 Market Growth
-Transfer spending increased dramatically between 2015 and 2026, reaching record levels in the most recent seasons.
+---
 
-🧰 Skills Demonstrated
-SQL
-Joins
-UNION ALL
-Aggregations
-CASE WHEN
-GROUP BY
-HAVING
-Data Cleaning
-Analytical Queries
-Excel
-Advanced Formulas
-XLOOKUP
-Structured Tables
-Dashboard Design
-KPI Development
-Power Query
-Data Transformation
-Data Merging
-Lookup Modeling
-Data Analysis
-Business Analysis
-KPI Design
-Market Research
-Financial Metrics
-Storytelling with Data
+# 🌍 Transfer Market Timeline
 
-📷 Dashboard Preview
-Market Dashboard
-Market Dashboard
+### 2015–2019 | Rapid Expansion 📈
 
-Club Dashboard
-Club Dashboard
+- Strong growth in transfer spending.
+- Increasing transfer activity across major leagues.
+- Record-breaking transfer fees became common.
 
-📁 Repository Structure
+### 2020–2021 | COVID-19 Disruption 📉
+
+- Reduced club revenues impacted transfer budgets.
+- Overall market spending declined.
+- Clubs became more conservative in recruitment.
+
+### 2022–2026 | Recovery & Record Growth 🚀
+
+- Transfer activity recovered strongly.
+- Spending exceeded pre-pandemic levels.
+- New market spending records were established.
+
+---
+
+# 🛠 SQL Analysis
+
+| Script | Description |
+|----------|-------------|
+| 01_ClubFinancialBalance.sql | Club spending, revenue and transfer balance analysis |
+| 02_TotalOverspending.sql | Overspending analysis based on transfer fees vs market values |
+| 03_AvgFeeByPlayerAge.sql | Transfer fee analysis by player age |
+| 04_TransferFeeByPosition.sql | Transfer fee analysis by playing position |
+| 05_DimClubsMapping.sql | Club-to-league mapping dimension |
+| 06_YearlyMarketTrends.sql | Long-term transfer market trend analysis |
+
+---
+
+# 📂 Repository Structure
+
+```text
 Football-Transfer-Market-Financial-Analysis-2015-2026
-│
-├── README.md
 │
 ├── SQL
 │   ├── 01_ClubFinancialBalance.sql
@@ -237,12 +168,40 @@ Football-Transfer-Market-Financial-Analysis-2015-2026
 │   ├── dashboard_market.png
 │   └── dashboard_clubs.png
 │
-└── Documentation
-    └── Data_Model.png
+└── README.md
+```
 
-👤 Author
-Łukasz Prus
+---
 
-Aspiring Data Analyst passionate about SQL, Excel, business analytics, and football data.
+# 💡 Skills Demonstrated
 
-GitHub: Lpru260
+### SQL
+- Joins
+- UNION ALL
+- CASE WHEN
+- Aggregations
+- GROUP BY
+- HAVING
+- Data Cleaning
+
+### Excel & Power Query
+- Data Transformation
+- Data Modeling
+- KPI Design
+- XLOOKUP
+- Interactive Dashboards
+
+### Analytics
+- Business Analysis
+- Financial Analysis
+- Data Visualization
+- Market Research
+- Storytelling with Data
+
+---
+
+## Author
+
+**Łukasz Prus**
+
+GitHub: **Lpru260**
