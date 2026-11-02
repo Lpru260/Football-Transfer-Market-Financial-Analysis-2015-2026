@@ -153,7 +153,9 @@ Forwards command the highest prices across the transfer market.
 # 📂 Repository Structure
 
 ```text
-Football-Transfer-Market-Financial-Analysis-2015-2026
+football-transfer-market-financial-analysis
+│
+├── README.md
 │
 ├── SQL
 │   ├── 01_ClubFinancialBalance.sql
@@ -166,11 +168,14 @@ Football-Transfer-Market-Financial-Analysis-2015-2026
 ├── Excel
 │   └── Football_Transfer_Market_Dashboard.xlsx
 │
-├── Images
-│   ├── dashboard_market.png
-│   └── dashboard_clubs.png
-│
-└── README.md
+└── Images
+    ├── dashboards
+    │   ├── market_dashboard.png
+    │   └── clubs_dashboard.png
+    │
+    └── analysis
+        ├── yearly_market_trends.png
+        └── age_value_curve.png
 ```
 
 ---
