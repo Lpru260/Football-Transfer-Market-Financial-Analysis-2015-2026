@@ -10,22 +10,28 @@ SQL Server (T-SQL)
 Power Query
 Microsoft Excel
 Interactive Dashboard Design
+
 🎯 Business Questions
+
 Club Financial Performance
 Which clubs generate the highest transfer profits?
 Which clubs operate as sustainable player-trading organizations?
 Which clubs consistently spend more than they earn?
+
 Transfer Efficiency
 Which clubs pay the highest premiums compared to market value?
 Which clubs appear to negotiate transfers most efficiently?
+
 Player Valuation
 At what age are players most valuable in the transfer market?
 How does transfer pricing differ across playing positions?
+
 Market Trends
 How has the transfer market evolved since 2015?
 How have transfer spending and overspending changed over time?
+
 🗂️ Dataset
-Source: Transfermarkt
+Source: https://www.kaggle.com/datasets/davidcariboo/player-scores
 
 Period Covered: 2015–2026
 
@@ -37,6 +43,7 @@ Player demographics
 Club information
 Competition data
 Transfer dates and seasons
+
 🛠️ SQL Analysis
 1. Club Financial Balance
 Objective
@@ -47,8 +54,10 @@ Total Spent
 Total Income
 Balance
 Income-To-Spend Ratio (ITSR)
+
 Methodology
-Using UNION ALL, transfer purchases and sales were consolidated into a single cash-flow model.
+Using UNION ALL, 
+transfer purchases and sales were consolidated into a single cash-flow model.
 
 Example Insight
 Traditional player-development clubs such as Benfica, Ajax, Salzburg, and Sporting CP generated the highest positive transfer balances.
@@ -74,6 +83,7 @@ Identify the age range that maximizes transfer market value.
 Metrics
 Age At Transfer
 Average Transfer Fee
+
 Age Segments
 Group	Age Range
 U-21	15–21
@@ -105,6 +115,7 @@ XLOOKUP relationships
 Dashboard filters
 League-level analysis
 Power Query transformations
+
 6. Yearly Market Trends
 Objective
 Analyze macroeconomic trends in the football transfer market.
@@ -148,6 +159,7 @@ Ajax Amsterdam
 RB Salzburg
 Sporting CP
 FC Porto
+
 Aggressive Spending Clubs
 
 Chelsea FC
@@ -196,6 +208,7 @@ KPI Design
 Market Research
 Financial Metrics
 Storytelling with Data
+
 📷 Dashboard Preview
 Market Dashboard
 Market Dashboard
@@ -225,6 +238,7 @@ Football-Transfer-Market-Financial-Analysis-2015-2026
 │
 └── Documentation
     └── Data_Model.png
+
 👤 Author
 Łukasz Prus
 
