@@ -20,7 +20,8 @@ The objective was to explore transfer market dynamics, evaluate club financial p
 
 ## Market Dashboard
 
-<img width="924" height="422" alt="image" src="https://github.com/user-attachments/assets/4233760b-2550-40cc-951b-c3d88c5a387a" />
+<img width="923" height="422" alt="image" src="https://github.com/user-attachments/assets/2bfd7b50-4c0e-4336-b264-e3f521de7a12" />
+
 
 
 ### Highlights
