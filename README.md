@@ -14,6 +14,21 @@ The objective was to explore transfer market dynamics, evaluate club financial p
 - Microsoft Excel
 - Data Visualization & Dashboarding
 
+
+## Data Preparation
+
+Before building the dashboard, data was transformed using:
+
+- SQL aggregations and filtering
+- Power Query merges
+- XLOOKUP league mapping
+- Income-To-Spend Ratio (ITSR) calculations
+- Overspending Share calculations
+- Age Group segmentation
+
+These transformations converted raw transfer records into analysis-ready datasets used throughout the dashboard.
+
+
 ---
 
 # 📊 Dashboard Preview
